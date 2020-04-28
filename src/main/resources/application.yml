@@ -1,12 +1,12 @@
 guru:
   jms:
-    username: JMS dodo
+    username: JMS default username
     password: passthis
     url: jmsdotcom
 
 ---
 spring:
-  profile: EN
+  profiles: es
 guru:
   jms:
-    username: JMS Username - English
+    username: JMS Username - Spanish
