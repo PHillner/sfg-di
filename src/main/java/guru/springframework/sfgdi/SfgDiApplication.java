@@ -1,6 +1,7 @@
 package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.controllers.*;
+import guru.springframework.sfgdi.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,9 +18,9 @@ public class SfgDiApplication {
 		MyController myController = ctx.getBean(MyController.class);
 
 		System.out.println(myController.sayHello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).getGreeting());
-		System.out.println(ctx.getBean(SetterInjectedController.class).getGreeting());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).getGreeting());
+
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser());
 	}
 
 }
