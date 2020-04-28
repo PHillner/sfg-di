@@ -3,3 +3,10 @@ guru:
     username: JMS dodo
     password: passthis
     url: jmsdotcom
+
+---
+spring:
+  profile: EN
+guru:
+  jms:
+    username: JMS Username - English
